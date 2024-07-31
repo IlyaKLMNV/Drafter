@@ -1,0 +1,24 @@
+.noteItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  text-align: left;
+}
+
+.noteContent {
+  flex: 1;
+}
+
+.noteButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.noteButton {
+  margin: 0 5px;
+}
