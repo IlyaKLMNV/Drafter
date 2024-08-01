@@ -13,8 +13,8 @@ export const addNote = createAsyncThunk('notes/addNote', async (newNote) => {
   return response.data;
 });
 
-export const updateNote = createAsyncThunk('notes/updateNote', async (updatedNote) => {
-  const response = await axios.put(`${NOTES_URL}/${updatedNote.id}`, updatedNote);
+export const updateNote = createAsyncThunk('notes/updateNote', async (note) => {
+  const response = await axios.put(`${NOTES_URL}/${note.id}`, note);
   return response.data;
 });
 
@@ -22,6 +22,11 @@ export const deleteNote = createAsyncThunk('notes/deleteNote', async (id) => {
   await axios.delete(`${NOTES_URL}/${id}`);
   return id;
 });
+
+export const selectNoteById = (state, noteId) => {
+  const foundNote = state.notes.notes.find(note => note.id === noteId);
+  return foundNote;
+};
 
 const notesSlice = createSlice({
   name: 'notes',
@@ -49,7 +54,5 @@ const notesSlice = createSlice({
       });
   },
 });
-
-export const selectNoteById = (state, noteId) => state.notes.notes.find(note => note.id === noteId);
 
 export default notesSlice.reducer;

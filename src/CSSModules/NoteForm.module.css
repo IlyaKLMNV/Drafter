@@ -5,7 +5,7 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Центрирование текста и элементов */
+  text-align: center;
 }
 
 .formLabel {
@@ -18,9 +18,9 @@
 }
 
 .form-control {
-  margin: 0 auto 10px auto; /* Центрирование полей ввода */
+  margin: 0 auto 10px auto;
   width: 100%;
-  max-width: 500px; /* Максимальная ширина полей ввода */
+  max-width: 500px;
 }
 
 .btn {
